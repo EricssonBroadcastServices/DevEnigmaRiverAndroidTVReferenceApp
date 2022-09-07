@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.tv_app"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.leanback:leanback:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.google.android.material:material:1.6.1'
+
+
+    if (findProject(':core') != null) {
+        implementation project(":core")
+    } else {
+        implementation "com.github.EricssonBroadcastServices.EnigmaRiverAndroid:core:__REPLACE_WITH_RELEASE_VERSION__"
+    }
+    if(findProject(':exoplayerintegration') != null) {
+        implementation project(":exoplayerintegration")
+    } else {
+        implementation "com.github.EricssonBroadcastServices.EnigmaRiverAndroid:exoplayerintegration:__REPLACE_WITH_RELEASE_VERSION__"
+    }
+    if(findProject(':exposureUtils') != null) {
+        implementation project(":exposureUtils")
+    } else {
+        implementation "com.github.EricssonBroadcastServices.EnigmaRiverAndroid:exposureUtils:__REPLACE_WITH_RELEASE_VERSION__"
+    }
+}

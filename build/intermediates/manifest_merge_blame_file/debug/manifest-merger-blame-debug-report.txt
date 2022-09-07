@@ -1,0 +1,100 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.tv_app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:6:5-67
+11-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:6:22-64
+12
+13    <uses-feature
+13-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:8:5-10:36
+14        android:name="android.hardware.touchscreen"
+14-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:9:9-52
+15        android:required="false" />
+15-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:10:9-33
+16    <uses-feature
+16-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:11:5-13:35
+17        android:name="android.software.leanback"
+17-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:12:9-49
+18        android:required="true" />
+18-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:13:9-32
+19
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->[:core] /Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/core/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+20-->[:core] /Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/core/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
+21
+22    <application
+22-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:15:5-33:19
+23        android:allowBackup="true"
+23-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:16:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.8.0] /Users/ramankaur/.gradle/caches/transforms-3/e553d3e4b7ead9039ef8639adc7e4f96/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:17:9-43
+27        android:label="@string/app_name"
+27-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:18:9-41
+28        android:supportsRtl="true"
+28-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:19:9-35
+29        android:testOnly="true"
+30        android:theme="@style/AppTheme" >
+30-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:20:9-40
+31        <activity
+31-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:21:9-27:20
+32            android:name="com.redbeemedia.enigma.referenceapp.LoginActivity"
+32-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:21:19-48
+33            android:exported="true" >
+33-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:22:13-36
+34            <intent-filter>
+34-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:23:13-26:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:24:17-69
+35-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:24:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:25:17-77
+37-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:25:27-74
+38            </intent-filter>
+39        </activity>
+40        <activity
+40-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:28:9-30:15
+41            android:name="com.redbeemedia.enigma.referenceapp.PlayerActivity"
+41-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:28:19-49
+42            android:screenOrientation="sensorLandscape" />
+42-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:29:13-56
+43        <activity android:name="com.redbeemedia.enigma.referenceapp.ListAssetsActivity" />
+43-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:31:9-56
+43-->/Users/ramankaur/AndroidStudioProjects/DevAndroidClient3/DevEnigmaRiverAndroidTVReferenceApp/src/main/AndroidManifest.xml:31:19-53
+44
+45        <provider
+45-->[androidx.emoji2:emoji2:1.2.0] /Users/ramankaur/.gradle/caches/transforms-3/c02ad642b7d375f830a642f6eec54ddc/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+46            android:name="androidx.startup.InitializationProvider"
+46-->[androidx.emoji2:emoji2:1.2.0] /Users/ramankaur/.gradle/caches/transforms-3/c02ad642b7d375f830a642f6eec54ddc/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+47            android:authorities="com.example.tv_app.androidx-startup"
+47-->[androidx.emoji2:emoji2:1.2.0] /Users/ramankaur/.gradle/caches/transforms-3/c02ad642b7d375f830a642f6eec54ddc/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+48            android:exported="false" >
+48-->[androidx.emoji2:emoji2:1.2.0] /Users/ramankaur/.gradle/caches/transforms-3/c02ad642b7d375f830a642f6eec54ddc/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+49            <meta-data
+49-->[androidx.emoji2:emoji2:1.2.0] /Users/ramankaur/.gradle/caches/transforms-3/c02ad642b7d375f830a642f6eec54ddc/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+50                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+50-->[androidx.emoji2:emoji2:1.2.0] /Users/ramankaur/.gradle/caches/transforms-3/c02ad642b7d375f830a642f6eec54ddc/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+51                android:value="androidx.startup" />
+51-->[androidx.emoji2:emoji2:1.2.0] /Users/ramankaur/.gradle/caches/transforms-3/c02ad642b7d375f830a642f6eec54ddc/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+52            <meta-data
+52-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/ramankaur/.gradle/caches/transforms-3/67132ab13a64efcca3880a821211c704/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+53                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+53-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/ramankaur/.gradle/caches/transforms-3/67132ab13a64efcca3880a821211c704/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+54                android:value="androidx.startup" />
+54-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/ramankaur/.gradle/caches/transforms-3/67132ab13a64efcca3880a821211c704/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+55        </provider>
+56    </application>
+57
+58</manifest>
