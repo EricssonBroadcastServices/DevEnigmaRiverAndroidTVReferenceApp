@@ -1,3 +1,16 @@
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.2"
+    }
+}
+
+
 plugins {
     id 'com.android.application'
 }
@@ -25,6 +38,17 @@ android {
         }
     }
 }
+
+
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
 
 dependencies {
 
