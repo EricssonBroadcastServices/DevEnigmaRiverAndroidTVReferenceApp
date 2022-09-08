@@ -123,10 +123,6 @@ public class PlayerActivity extends AppCompatActivity {
         final IVirtualButtonListener buttonListener = new BaseVirtualButtonListener() {
             @Override
             public void onStateChanged() {
-                System.out.println(view.getId());
-                System.out.println(view);
-                System.out.println("virtualButton.isEnabled()" + virtualButton.isEnabled());
-                System.out.println("virtualButton.isRelevant()" + virtualButton.isRelevant());
                 view.setVisibility(virtualButton.isEnabled() ? VISIBLE : GONE);
             }
         };

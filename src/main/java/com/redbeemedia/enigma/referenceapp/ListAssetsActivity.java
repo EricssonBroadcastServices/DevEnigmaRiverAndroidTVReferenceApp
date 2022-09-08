@@ -47,8 +47,6 @@ public class ListAssetsActivity extends AppCompatActivity {
         updateAssets(sessionLiveData.getValue());
         sessionLiveData.observe(this, session -> updateAssets(session));
         RecyclerView assetList = findViewById(R.id.asset_list);
-        System.out.println(assetList);
-        System.out.println(assets);
         assetList.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         assetList.setAdapter(new AssetListAdapter(this, assets, new ActivityConnector<>(this)));
     }

@@ -57,9 +57,6 @@ public class LoginActivity extends AppCompatActivity {
                 EnigmaRiverReferenceApp.BASE_URL = baseUrlField.getText().toString();
                 EnigmaRiverReferenceApp.ReferenceAppInitialization initialization = new EnigmaRiverReferenceApp.ReferenceAppInitialization();
                 EnigmaRiverContext.initialize(getApplication(), initialization);
-
-
-                System.out.println(cubuField.getText().toString());
                 String[] split = cubuField.getText().toString().split("/");
                 EnigmaRiverReferenceApp.BUSINESS_UNIT = new BusinessUnit(split[0], split[1]);
                 enigmaLogin = new EnigmaLogin(EnigmaRiverReferenceApp.BUSINESS_UNIT);
