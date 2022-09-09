@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_base_url"
-            android:text="https://wl.enigmatv.io"
+            android:text=""
             android:inputType="textAutoComplete"
             android:padding="@dimen/padding_small" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_cu_bu"
-            android:text="Nordisk/NFTest"
+            android:text=""
             android:inputType="textAutoComplete"
             android:padding="@dimen/padding_small" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -76,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_username"
-            android:text="ramanjot.kaur@eyevinn.se"
+            android:text=""
             android:inputType="textEmailAddress|textAutoComplete"
             android:padding="@dimen/padding_small" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -98,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_password"
-            android:text="Ramanjot98"
+            android:text=""
             android:inputType="textPassword"
             android:padding="@dimen/padding_small" />
     </com.google.android.material.textfield.TextInputLayout>
