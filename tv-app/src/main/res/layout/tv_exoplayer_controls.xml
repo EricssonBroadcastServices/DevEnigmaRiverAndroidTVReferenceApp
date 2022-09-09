@@ -28,7 +28,7 @@
             android:layout_marginEnd="2dp"
             android:focusable="true"
             android:nextFocusLeft="@id/forward_button"
-            android:nextFocusRight="@id/pause_button"
+            android:nextFocusRight="@id/play_pause_container"
             android:nextFocusUp="@id/subtitles_spinner"
             android:nextFocusDown="@id/play_button"
             android:padding="2dp"
@@ -81,7 +81,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/timelineView"
                 app:layout_constraintRight_toLeftOf="@id/play_button" />
 
-            </FrameLayout>
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/forward_button"
@@ -89,7 +89,7 @@
             android:layout_height="70dp"
             android:layout_marginStart="2dp"
             android:focusable="true"
-            android:nextFocusLeft="@id/pause_button"
+            android:nextFocusLeft="@id/play_pause_container"
             android:nextFocusRight="@id/rewind_button"
             android:nextFocusDown="@id/play_button"
             android:padding="2dp"

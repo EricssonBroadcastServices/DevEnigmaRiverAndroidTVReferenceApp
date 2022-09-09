@@ -2,7 +2,7 @@ package com.redbeemedia.enigma.referenceapp;
 
 import static android.graphics.PorterDuff.Mode.CLEAR;
 import static android.graphics.PorterDuff.Mode.DARKEN;
-import static android.view.View.GONE;
+import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 import static com.google.android.exoplayer2.ui.CaptionStyleCompat.DEFAULT;
 
@@ -115,6 +115,13 @@ public class PlayerActivity extends AppCompatActivity {
 
         View viewByIdRwd = findViewById(R.id.rewind_button);
         connect(viewByIdRwd, enigmaPlayer.getVirtualControls().getRewind());
+
+        View playPauseContainerView = findViewById(R.id.play_pause_container);
+        playPauseContainerView.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                handleButtonsNavigation();
+            }
+        });
     }
 
     private void connect(View view, IVirtualButton virtualButton) {
@@ -123,10 +130,21 @@ public class PlayerActivity extends AppCompatActivity {
         final IVirtualButtonListener buttonListener = new BaseVirtualButtonListener() {
             @Override
             public void onStateChanged() {
-                view.setVisibility(virtualButton.isEnabled() ? VISIBLE : GONE);
+                view.setVisibility(virtualButton.isEnabled() ? VISIBLE : INVISIBLE);
+                handleButtonsNavigation();
             }
         };
         view.addOnAttachStateChangeListener(new VirtualButtonViewAttacher(virtualButton, buttonListener, handler));
+    }
+
+    private void handleButtonsNavigation() {
+        View playButtonView = findViewById(R.id.play_button);
+        View pauseButtonView = findViewById(R.id.pause_button);
+        if (playButtonView.getVisibility() == INVISIBLE) {
+            pauseButtonView.requestFocus();
+        } else if (pauseButtonView.getVisibility() == INVISIBLE) {
+            playButtonView.requestFocus();
+        }
     }
 
     private void handleFocusOnButtons(ImageView playButtonImageView) {
