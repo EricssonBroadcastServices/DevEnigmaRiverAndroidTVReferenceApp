@@ -33,8 +33,10 @@ import com.redbeemedia.enigma.core.error.InvalidAssetError;
 import com.redbeemedia.enigma.core.error.NotEntitledToAssetError;
 import com.redbeemedia.enigma.core.playbacksession.IPlaybackSession;
 import com.redbeemedia.enigma.core.player.EnigmaPlayer;
+import com.redbeemedia.enigma.core.player.EnigmaPlayerState;
 import com.redbeemedia.enigma.core.player.IEnigmaPlayer;
 import com.redbeemedia.enigma.core.player.controls.IControlResultHandler;
+import com.redbeemedia.enigma.core.player.listener.BaseEnigmaPlayerListener;
 import com.redbeemedia.enigma.core.playrequest.BasePlayResultHandler;
 import com.redbeemedia.enigma.core.playrequest.IPlaybackProperties;
 import com.redbeemedia.enigma.core.playrequest.PlayRequest;
@@ -72,7 +74,7 @@ public class PlayerActivity extends AppCompatActivity {
         exoPlayerTech = new ExoPlayerTech(this, getString(R.string.app_name));
         exoPlayerTech.addDriftListener(new DriftCorrector()); // For automatic drift correction
         exoPlayerTech.attachView(findViewById(R.id.player_view));
-        exoPlayerTech.hideController();
+        // exoPlayerTech.hideController();
 
         final ISession session = SessionContainer.getSession().getValue();
         if (session == null) {
@@ -103,6 +105,30 @@ public class PlayerActivity extends AppCompatActivity {
         bindButtons();
     }
 
+    private void connectPlayPause() {
+        ImageView playPauseView = findViewById(R.id.play_pause_button);
+        handleFocusOnButtons((ImageView) playPauseView);
+        this.enigmaPlayer.addListener(new BaseEnigmaPlayerListener(){
+            @Override
+            public void onStateChanged(EnigmaPlayerState from, EnigmaPlayerState to) {
+                if (to == EnigmaPlayerState.PLAYING){
+                    playPauseView.setImageResource(R.drawable.lb_ic_pause);
+                }else if(from == EnigmaPlayerState.PLAYING){
+                    playPauseView.setImageResource(R.drawable.lb_ic_play);
+                }
+            }
+        }, handler);
+        playPauseView.setOnClickListener(v -> {
+            if(enigmaPlayer.getVirtualControls().getPause().isEnabled()) {
+                enigmaPlayer.getVirtualControls().getPause().click();
+                //playPauseView.setImageResource(R.drawable.lb_ic_play);
+            } else {
+                enigmaPlayer.getVirtualControls().getPlay().click();
+                //playPauseView.setImageResource(R.drawable.lb_ic_pause);
+            }
+        });
+    }
+
     private void bindButtons() {
         View playButtonView = findViewById(R.id.play_button);
         connect(playButtonView, enigmaPlayer.getVirtualControls().getPlay());
@@ -117,9 +143,12 @@ public class PlayerActivity extends AppCompatActivity {
         connect(viewByIdRwd, enigmaPlayer.getVirtualControls().getRewind());
 
         View playPauseContainerView = findViewById(R.id.play_pause_container);
+
+        connectPlayPause();
+
         playPauseContainerView.setOnFocusChangeListener((v, hasFocus) -> {
             if (hasFocus) {
-                handleButtonsNavigation();
+                // handleButtonsNavigation();
             }
         });
     }
@@ -131,7 +160,7 @@ public class PlayerActivity extends AppCompatActivity {
             @Override
             public void onStateChanged() {
                 view.setVisibility(virtualButton.isEnabled() ? VISIBLE : INVISIBLE);
-                handleButtonsNavigation();
+                // handleButtonsNavigation();
             }
         };
         view.addOnAttachStateChangeListener(new VirtualButtonViewAttacher(virtualButton, buttonListener, handler));
